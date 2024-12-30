@@ -1,8 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        primary: '#020817'
+      },
+      backgroundImage: {
+        'gradient-lavender': 'linear-gradient(135deg, #C9BED9, #E4D2F0)'
+      }
+    }
   },
   plugins: []
 }

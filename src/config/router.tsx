@@ -1,5 +1,5 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom'
-import HomePages from '../pages/home'
+import HomePages from '../pages/home/HomePage'
 import AccountStatisticsPage from '../pages/statistic/AccountStatisticsPage'
 
 export const routerConfig = createBrowserRouter([
@@ -12,7 +12,7 @@ export const routerConfig = createBrowserRouter([
     element: <HomePages />
   },
   {
-    path: '/statistic',
+    path: '/statistic/:username',
     element: <AccountStatisticsPage />
   }
 ])

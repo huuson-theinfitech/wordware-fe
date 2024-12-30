@@ -10,10 +10,10 @@ interface IconTagsProps {
 
 const IconTags = ({ className, icon, count, label, colorText }: IconTagsProps) => {
   return (
-    <div className={`flex justify-center gap-2 cursor-pointer items-center ${className}`}>
+    <div className={`flex gap-2 cursor-pointer items-center ${className}`}>
       {icon}
       <div className={clsx('space-x-1', colorText)}>
-        <span className='font-medium'>{count}</span>
+        <span className='font-medium'>{count?.toLocaleString()}</span>
         <span>{label}</span>
       </div>
     </div>

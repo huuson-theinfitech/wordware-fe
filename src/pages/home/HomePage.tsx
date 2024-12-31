@@ -12,6 +12,12 @@ const HomePage = () => {
     navigate(`/statistic/${handleTwitterString(value)}`)
   }
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      handleClick()
+    }
+  }
+
   return (
     <div className='grid w-screen h-screen grid-cols-1 overflow-hidden overflow-y-auto lg:grid-cols-2 '>
       <div className='col-span-1 bg-body-grey pt-[100px]'>
@@ -30,6 +36,7 @@ const HomePage = () => {
               placeholder='@ユーザー名'
               value={value}
               onChange={(e) => setValue(e.target.value)}
+              onKeyDown={handleKeyDown}
               className='h-full sm:min-w-[272px] p-3  border-2 rounded-l-md border-black focus:outline-none'
             />
             <button

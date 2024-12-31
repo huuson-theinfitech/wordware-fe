@@ -17,7 +17,7 @@ export default {
       },
       backgroundImage: {
         'gradient-lavender': 'linear-gradient(135deg, #C9BED9, #E4D2F0)',
-        'background-image': "url('./src/assets/bg-background.jpg')"
+        'background-image': "url('/src/assets/bg-background.jpg')"
       }
     }
   },

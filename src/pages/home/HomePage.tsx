@@ -19,8 +19,8 @@ const HomePage = () => {
   }
 
   return (
-    <div className='grid w-screen h-screen grid-cols-1 overflow-hidden overflow-y-auto lg:grid-cols-2 '>
-      <div className='col-span-1 bg-body-grey pt-[100px]'>
+    <div className='grid self-end w-screen h-screen grid-cols-1 overflow-hidden overflow-y-auto lg:grid-cols-2 '>
+      <div className='flex flex-col justify-end h-screen col-span-1 bg-body-grey'>
         <div className='px-12 pb-12 border-b sm:pl-24 lg:mr-20'>
           <div className='text-[48px] font-light sm:flex sm:flex-wrap'>
             <span>Infi</span>
@@ -61,7 +61,7 @@ const HomePage = () => {
             </ul>
           </div>
         </div>
-        <div className='pl-24 pt-11 pb-28'>
+        <div className='pl-24 pt-11 pb-[12%]'>
           <Link
             to='https://theinfitech.jp/'
             target='_blank'
@@ -72,7 +72,7 @@ const HomePage = () => {
           </Link>
         </div>
       </div>
-      <div className='flex flex-col pb-[120px] lg:pb-0 items-center col-span-1 px-8 text-white bg-background-image bg-cover  pt-[100px] bg-bottom'>
+      <div className='flex flex-col items-center h-full lg:pb-0 justify-center col-span-1 px-8 text-white bg-background-image bg-cover  pt-[100px] bg-bottom'>
         <div className='text-[56px] sm:leading-10 font-semibold'>
           <p>THE</p>
           <div className='flex flex-col gap-2 sm:items-center sm:flex-row'>

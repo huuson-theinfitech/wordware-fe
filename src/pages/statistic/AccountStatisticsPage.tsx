@@ -50,7 +50,7 @@ const AccountStatisticsPage = () => {
           </>
         )}
       </div>
-      <div className='grid grid-cols-1 gap-6 mt-4 lg:grid-cols-4 place-items-center'>
+      <div className='grid grid-cols-1 gap-8 mt-4 lg:grid-cols-4 place-items-center'>
         {isLoading ? (
           <Skeleton count={5} />
         ) : (

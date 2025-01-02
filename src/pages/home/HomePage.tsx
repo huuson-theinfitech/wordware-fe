@@ -23,9 +23,11 @@ const HomePage = () => {
       <div className='flex flex-col justify-end h-screen col-span-1 bg-body-grey'>
         <div className='px-12 pb-12 border-b sm:pl-24 lg:mr-20'>
           <div className='text-[48px] font-light sm:flex sm:flex-wrap'>
-            <span>Infi</span>
-            <span className='font-extrabold text-orange'>AI</span>
-            <span>であなたの</span>
+            <div className='flex items-center'>
+              <FaXTwitter className='w-11 h-11' />
+              <span className='font-extrabold text-orange'>AI</span>
+              <span>であなたの</span>
+            </div>
           </div>
           <div className='flex items-center space-x-2 text-[48px] font-light flex-wrap'>
             <FaXTwitter />
@@ -48,16 +50,22 @@ const HomePage = () => {
             </button>
           </div>
           <div className='mt-[72px] text-base'>
-            <div>
+            <div className='flex items-center'>
               <span>こちらは</span>
               <span className='font-bold text-orange'>THEINFITECH</span>
-              <span>で構築した「InfiAI」です。下記の機能を備えています：</span>
+              <span>で構築した「</span>
+              <FaXTwitter className='w-[14px] h-[14px]' />
+              <span>AI」です。下記の機能を備えています：</span>
             </div>
             <ul className='list-disc list-inside '>
               <li>AIであなたの関心事を引き出し</li>
               <li>最新のインタラクションを分析してデータ化</li>
               <li>あなたを3つのキーワードで表す</li>
-              <li>「InfiAIの視点で見る、あなたの真の姿」機能</li>
+              <li className='ml-[-1px] flex items-center before:content-["•"] before:mr-2'>
+                <span>「</span>
+                <FaXTwitter className='w-[14px] h-[14px]' />
+                <span>AIの視点で見る、あなたの真の姿」機能</span>
+              </li>
             </ul>
           </div>
         </div>

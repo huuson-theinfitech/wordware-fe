@@ -12,6 +12,7 @@ import { useParams } from 'react-router-dom'
 import { Key } from 'react'
 import useQueryStatisticsUser from '../../hooks/useQueryStatisticsUser'
 import { getCurrentMonthYear } from '../../utils/date'
+import { FaXTwitter } from 'react-icons/fa6'
 
 const AccountStatisticsPage = () => {
   const { username } = useParams()
@@ -98,7 +99,10 @@ const AccountStatisticsPage = () => {
           ) : (
             <div className='flex flex-row items-center gap-3 text-blue-text'>
               <AutoAwesomeSharpIcon fontSize='large' />
-              <p className='text-2xl font-bold tracking-[2px]'>INFIAI THINK ABOUT YOU</p>
+              <div className='flex items-center'>
+                <FaXTwitter className='w-6 h-6' />
+                <p className='text-2xl font-bold tracking-[2px]'>AI THINK ABOUT YOU</p>
+              </div>
               <AutoAwesomeSharpIcon fontSize='large' />
             </div>
           )}

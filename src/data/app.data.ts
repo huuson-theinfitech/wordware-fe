@@ -19,4 +19,4 @@ export const data = {
 
 export const randomColor = ['text-orange', 'text-green-light', 'text-black']
 
-export const tagsData = ['#INFIAI', '#THEINFITECH']
+export const tagsData = ['#XAI', '#THEINFITECH']

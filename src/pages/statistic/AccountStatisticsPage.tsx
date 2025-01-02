@@ -6,11 +6,12 @@ import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutline
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined'
 import AutoAwesomeSharpIcon from '@mui/icons-material/AutoAwesomeSharp'
 import IconTags from './IconTags'
-import { randomColor } from '../../data/app.data'
+import { randomColor, tagsData } from '../../data/app.data'
 import Skeleton from '../../components/Skeleton'
 import { useParams } from 'react-router-dom'
 import { Key } from 'react'
 import useQueryStatisticsUser from '../../hooks/useQueryStatisticsUser'
+import { getCurrentMonthYear } from '../../utils/date'
 
 const AccountStatisticsPage = () => {
   const { username } = useParams()
@@ -55,7 +56,7 @@ const AccountStatisticsPage = () => {
           <Skeleton count={5} />
         ) : (
           <div className='col-span-1 p-8 tracking-wider bg-white rounded-3xl'>
-            <p className='font-semibold text-blue-cobalt'>DECEMBER 2024</p>
+            <p className='font-semibold text-blue-cobalt'>{getCurrentMonthYear()}</p>
             <div className='flex flex-col items-start gap-5 mt-5'>
               <IconTags
                 icon={<EditNoteIcon fontSize='large' />}
@@ -121,8 +122,8 @@ const AccountStatisticsPage = () => {
           {isLoading ? (
             <Skeleton count={3} className='!flex-row' />
           ) : (
-            <div className='flex flex-row flex-wrap justify-center gap-2'>
-              {data?.interest?.map((item: string, index: Key) => (
+            <div className='flex flex-row flex-wrap justify-center gap-4'>
+              {tagsData?.map((item: string, index: Key) => (
                 <div
                   className='px-4 py-1 text-blue-900 flex justify-normal items-center rounded-full tracking-[2px]'
                   key={`${item}-${index}`}
@@ -142,7 +143,7 @@ const AccountStatisticsPage = () => {
             data?.interest?.map((item: string, index: number) => (
               <div
                 key={`${item}-${index}`}
-                className={`flex items-center font-medium text-lg tracking-widest justify-center bg-white w-[200px] py-4 cursor-pointer rounded-3xl ${randomColor[index]}`}
+                className={`flex items-center font-medium text-lg tracking-widest justify-center bg-white w-[200px] p-4 cursor-pointer rounded-3xl ${randomColor[index]}`}
               >
                 <p>{item}</p>
               </div>

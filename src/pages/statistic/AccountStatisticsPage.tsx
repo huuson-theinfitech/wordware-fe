@@ -11,7 +11,6 @@ import Skeleton from '../../components/Skeleton'
 import { useParams } from 'react-router-dom'
 import { Key } from 'react'
 import useQueryStatisticsUser from '../../hooks/useQueryStatisticsUser'
-import { getCurrentMonthYear } from '../../utils/date'
 import { FaXTwitter } from 'react-icons/fa6'
 
 const AccountStatisticsPage = () => {
@@ -48,7 +47,9 @@ const AccountStatisticsPage = () => {
         ) : (
           <>
             <p className='text-3xl font-bold tracking-widest'>{data?.name}</p>
-            <img src={tickBlueTwitter} className='w-6 h-6 text-blue-text' alt='Twitter Blue Tick' />
+            {data?.is_blue_verified && (
+              <img src={tickBlueTwitter} className='w-6 h-6 text-blue-text' alt='Twitter Blue Tick' />
+            )}
           </>
         )}
       </div>
@@ -57,7 +58,7 @@ const AccountStatisticsPage = () => {
           <Skeleton count={5} />
         ) : (
           <div className='col-span-1 p-8 tracking-wider bg-white rounded-3xl'>
-            <p className='font-semibold text-blue-cobalt'>{getCurrentMonthYear()}</p>
+            <p className='font-semibold text-blue-cobalt'>{data?.time_gap}</p>
             <div className='flex flex-col items-start gap-5 mt-5'>
               <IconTags
                 icon={<EditNoteIcon fontSize='large' />}

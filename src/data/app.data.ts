@@ -1,5 +1,6 @@
 export const data = {
   name: 'MANH (THOMAS) NGUYEN | THEINFITECH CEO ',
+  time_gap: '1 hour ago',
   screen_name: 'johndoe123',
   followers_count: 1500,
   following_count: 350,

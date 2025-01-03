@@ -9,7 +9,12 @@ const HomePage = () => {
   const [value, setValue] = useState('')
 
   const handleClick = () => {
-    navigate(`/statistic/${handleTwitterString(value)}`)
+    const paramValue = handleTwitterString(value)
+    if (paramValue) {
+      navigate(`/statistic/${handleTwitterString(value)}`)
+    } else {
+      alert('Please enter a valid twitter username or url')
+    }
   }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {

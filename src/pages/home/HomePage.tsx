@@ -19,11 +19,11 @@ const HomePage = () => {
   }
 
   return (
-    <div className='grid self-end w-screen h-screen grid-cols-1 overflow-hidden overflow-y-auto lg:grid-cols-2 '>
+    <div className='grid self-end w-screen h-screen grid-cols-1 overflow-hidden overflow-y-auto break-words whitespace-normal lg:grid-cols-2'>
       <div className='flex flex-col justify-end h-screen col-span-1 bg-body-grey'>
-        <div className='px-12 pb-12 border-b sm:pl-24 lg:mr-20'>
+        <div className='px-12 pb-12 border-b sm:pl-24 '>
           <div className='text-[48px] font-light sm:flex sm:flex-wrap'>
-            <div className='flex items-center'>
+            <div className='flex flex-wrap items-center'>
               <FaXTwitter className='w-11 h-11' />
               <span className='font-extrabold text-orange'>AI</span>
               <span>であなたの</span>
@@ -50,22 +50,16 @@ const HomePage = () => {
             </button>
           </div>
           <div className='mt-[72px] text-base'>
-            <div className='flex items-center'>
+            <div className='flex flex-wrap items-center'>
               <span>こちらは</span>
               <span className='font-bold text-orange'>THEINFITECH</span>
-              <span>で構築した「</span>
-              <FaXTwitter className='w-[14px] h-[14px]' />
-              <span>AI」です。下記の機能を備えています：</span>
+              <span>で構築した「XAI」です。下記の機能を備えています：</span>
             </div>
             <ul className='list-disc list-inside '>
               <li>AIであなたの関心事を引き出し</li>
               <li>最新のインタラクションを分析してデータ化</li>
               <li>あなたを3つのキーワードで表す</li>
-              <li className='ml-[-1px] flex items-center before:content-["•"] before:mr-2'>
-                <span>「</span>
-                <FaXTwitter className='w-[14px] h-[14px]' />
-                <span>AIの視点で見る、あなたの真の姿」機能</span>
-              </li>
+              <li>「XAIの視点で見る、あなたの真の姿」機能</li>
             </ul>
           </div>
         </div>
@@ -80,7 +74,7 @@ const HomePage = () => {
           </Link>
         </div>
       </div>
-      <div className='flex flex-col items-center h-full lg:pb-0 justify-center col-span-1 px-8 text-white bg-background-image bg-cover  pt-[100px] bg-bottom'>
+      <div className='flex flex-col items-center justify-center h-full col-span-1 px-8 py-12 text-white bg-bottom bg-cover lg:pb-0 bg-background-image'>
         <div className='text-[56px] sm:leading-10 font-semibold'>
           <p>THE</p>
           <div className='flex flex-col gap-2 sm:items-center sm:flex-row'>
